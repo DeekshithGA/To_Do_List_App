@@ -65,4 +65,5 @@ How to Use
 
 - Your tasks will be saved automatically in your browser's local storage.
 
-
+Author
+[Deekshith G A] - Creator and maintainer
