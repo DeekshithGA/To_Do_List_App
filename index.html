@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Advanced To-Do List App</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header>
+  <h1>To-Do List</h1>
+  <div id="current-datetime"></div>
+  <button id="theme-toggle">Toggle Theme</button>
+</header>
+<main>
+  <form id="task-form">
+    <input type="text" id="task-input" placeholder="Add a new task..." required />
+    <select id="priority-input">
+      <option value="High">High</option>
+      <option value="Medium" selected>Medium</option>
+      <option value="Low">Low</option>
+    </select>
+    <input type="date" id="due-date-input" />
+    <select id="category-input">
+      <option value="Personal">Personal</option>
+      <option value="Work">Work</option>
+      <option value="Other">Other</option>
+    </select>
+    <input type="text" id="attachment-input" placeholder="Add link/note" />
+    <label><input type="checkbox" id="recurring-input" />Recurring</label>
+    <button type="submit">Add</button>
+  </form>
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="Search tasks..." />
+    <select id="sort-input">
+      <option value="date">Sort by Due Date</option>
+      <option value="priority">Sort by Priority</option>
+    </select>
+    <button id="clear-completed">Clear Completed</button>
+    <button id="bulk-complete">Mark All Completed</button>
+    <button id="clear-all">Clear All Tasks</button>
+    <button id="undo-btn">Undo Delete</button>
+    <button id="toggle-completed-visibility">Hide Completed</button>
+    <button id="export-btn">Export</button>
+    <input type="file" id="import-btn" style="display:none;" />
+    <label for="import-btn" class="import-btn-label">Import</label>
+  </div>
+  <progress id="complete-bar" value="0" max="100"></progress>
+  <div id="progress-label"></div>
+  <div id="stats"></div>
+  <ul id="task-list"></ul>
+  <h2>Archived Tasks</h2>
+  <ul id="archive-list"></ul>
+</main>
+<dialog id="edit-dialog">
+  <form id="edit-form">
+    <input type="text" id="edit-task-input" required />
+    <button type="submit">Save</button>
+    <button type="button" id="cancel-edit">Cancel</button>
+  </form>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
